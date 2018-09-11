@@ -1,0 +1,4 @@
+#pages
+# PYTHON PACKAGE REQUIREMENTS:
+
+sqlparse
