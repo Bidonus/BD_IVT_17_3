@@ -34,4 +34,4 @@ jobs:
           name: run 
           command: |
             . venv/bin/activate
-            python main.py
+            python run_validation.py

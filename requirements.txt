@@ -1,4 +1,4 @@
 #pages
 # PYTHON PACKAGE REQUIREMENTS:
 
-sqlparse
+sqlite3
