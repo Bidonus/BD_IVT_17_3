@@ -3,7 +3,6 @@ import os
 
 
 class DB:
-
     connection = sqlite3.connect("myTable.db")
 
     crsr = connection.cursor()
@@ -31,26 +30,31 @@ class DB:
         sql_command = """INSERT INTO emp VALUES (41, "Laas", "Reas", "M", "1988-09-12");"""
         self.crsr.execute(sql_command)
 
-
     def cleaning(self):
         self.connection.commit()
         self.connection.close()
         os.remove("myTable.db")
 
-
     def validate(self):
 
-        command = open("query.sql").read()
+        error = 0
+        bad_query = ""
 
-        try:
-            self.crsr.execute(command)
-            print("Everything good. Keep moving !")
+        for query in os.listdir("./queries/"):
+
+            command = open("./queries/" + query).read()
+
+            try:
+                self.crsr.executescript(command)
+            except:
+                error += 1
+                bad_query = query
+
+        if error == 0:
+            print("All queries are good, perfect!")
+        else:
             self.cleaning()
-        except:
-            self.cleaning()
-            raise SyntaxError("Bad SQL query.")
+            print("Bad query")
+            raise SyntaxError("Bad SQL query. Troubles in " + bad_query + " file")
 
-
-
-
-
+        self.cleaning()
