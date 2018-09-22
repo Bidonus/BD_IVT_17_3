@@ -7,4 +7,4 @@ select * from ProductCategory;
 select Name from Product where Color = 'Black';
 select * from ProductDescription;
 select * from SalesOrderDetail;
-
+select distinct City, StateProvince from Address;
