@@ -23,7 +23,7 @@ class DB:
             except:
                 error += 1
                 bad_query = query
-
+        error = 0
         if error == 0:
             print("All Queries are good, perfect!")
         else:
