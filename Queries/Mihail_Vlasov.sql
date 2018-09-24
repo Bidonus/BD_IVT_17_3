@@ -12,3 +12,5 @@ SELECT CustomerName = FirstName + ' ' + ISNULL(MiddleName, '') + ' ' + LastName 
 
 SELECT CustomerID, PrimaryContact = ISNULL(EmailAddress, Phone) FROM Customer;
 
+SELECT SalesOrderID, CASE ISNULL(ShipDate, 0) WHEN 0 THEN 'Awaiting Shipping' ELSE 'Shipped' END AS ShippingStatus FROM SalesOrderHeader;
+
