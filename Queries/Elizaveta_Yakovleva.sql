@@ -1,25 +1,17 @@
-select * from Customer;
+Select distinct City, StateProvince from Address;
 
-select Title, FirstName, MiddleName, LastName, Suffix from Customer;
+select TOP 10 PERCENT Name from Product ORDER BY Weight DESC ;
 
-select SalesPerson, (Title +' '+ LastName) as CustomerName, Phone from Customer;
+select Name from Product 
+ORDER BY Weight DESC Offset 10 Rows FETCH NEXT 100 rows only;
 
+select Name, Color, Size from Product where ProductModelID = 1;
 
-select (STR(CustomerID) + ': ' + CompanyName) as  CustomerCompany from Customer;
+select Name, ProductNumber
+from Product 
+where (Color = 'Black' or Color = 'Red' or Color = 'White') and (Size = 'M' or Size = 'S');
 
-select (SalesOrderNumber + ' (' + CAST(RevisionNumber as varchar) + ')') as OrderRevision, CAST(OrderDate as date) as OrderDate from SalesOrderHeader;
+select ProductNumber, Name, ListPrice from Product where ProductNumber like 'BK-%';
 
-select (FirstName +' '+ ISNULL(MiddleName, '') + ' '+LastName) as CustomerName from Customer;
-
-select CustomerID, ISNULL(EmailAddress, Phone) as  PrimaryContact from Customer;
-
-SELECT
-  SalesOrderID,
-
-  CASE
-    [ShipDate] 
-	WHEN ShipDate THEN 'Shipped'
-    ELSE 'Awaiting Shipment'
-  END 
-
-FROM SalesOrderHeader;
+select ProductNumber, Name, ListPrice from Product 
+where ProductNumber like 'BK-[^R]%-__';
