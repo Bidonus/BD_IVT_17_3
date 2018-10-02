@@ -1,23 +1,8 @@
-select * from SalesLt.Customer;
-select Title,FirstName,MiddleName,LastName,Suffix from SalesLt.Customer;
-select SalesPerson,
-Title + FirstName  as CustomerName,
-Phone from SalesLt.Customer;
-select
-CONVERT(varchar,CustomerID)+ ' : ' + CompanyName as  CustomerCompany
-from SalesLt.Customer;
-select
-CONVERT(varchar, SalesOrderID) + ' (' + CONVERT(varchar,RevisionNumber)+ ')' as OrderRevision,
-CONVERT(nvarchar,OrderDate ,102) as OrderDate
-from SalesLt.SalesOrderHeader;
-select
-FirstName +' ' +LastName  +' '+ ISNULL(MiddleName, '')  as  CustomerName
-from SalesLt.Customer;
-select
-ISNULL(EmailAddress , Phone)  as   PrimaryContact
-from SalesLt.Customer;
-select
-SalesOrderID,
-ISNULL(CONVERT(nvarchar,ShipDate ,102) , 'Awaiting Shipment')  as   PrimaryContact
-from SalesLt.SalesOrderHeader;
-
+SELECT * FROM SalesLT.Customer;
+SELECT Title, FirstName, MiddleName, LastName, MiddleName FROM Customer;
+SELECT SalesPerson, CustomerName = Title + ' ' + LastName, Phone FROM Customer;
+SELECT CustomerCompany = CONVERT(varchar, CustomerID) + ': ' + CompanyName FROM Customer;
+SELECT OrderRevision = SalesOrderNumber + '(' + CONVERT(varchar, RevisionNumber) + ')', OrderData = CONVERT(varchar, OrderDate, 102) FROM SalesOrderHeader;
+SELECT CustomerName = FirstName + ' ' + ISNULL(MiddleName, '') + ' ' + LastName FROM Customer;
+SELECT CustomerID, PrimaryContact = ISNULL(EmailAddress, Phone) FROM Customer;
+SELECT SalesOrderID, CASE [ShipDate] WHEN ShipDate THEN 'Shipped' ELSE 'Awaiting Shipment' END FROM SalesOrderHeader;
