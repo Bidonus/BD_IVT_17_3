@@ -13,3 +13,4 @@ SELECT
     ELSE 'Awaiting Shipment'
   END
 FROM SalesOrderHeader;
+
