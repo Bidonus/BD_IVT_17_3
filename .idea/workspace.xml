@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="191cb974-51c4-48c4-b6b5-59305abcb589" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Queries/Elizaveta_Yakovleva_lab1.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Queries/Example_query_file.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Queries/Mihail_Vlasov_lab1.sql" afterDir="false" />
-    </list>
+    <list default="true" id="191cb974-51c4-48c4-b6b5-59305abcb589" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +50,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Elizaveta_Yakovleva_lab1.sql" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Elizaveta_Yakovleva_lab1.sql" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Queries/Elizaveta_Yakovleva_lab1.sql">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
@@ -63,7 +59,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="homework.txt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="homework.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Homework/homework.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
@@ -284,9 +280,9 @@
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Python Console" order="9" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3069307" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3069307" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32838285" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32838285" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.1650165" />
       <window_info anchor="bottom" id="DB Execution Console" order="7" />
@@ -540,17 +536,17 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Queries/Elizaveta_Yakovleva.sql" />
-    <entry file="file://$PROJECT_DIR$/Queries/Elizaveta_Yakovleva_lab1.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Homework/homework.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Queries/Elizaveta_Yakovleva_lab1.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
         </state>
       </provider>
     </entry>
