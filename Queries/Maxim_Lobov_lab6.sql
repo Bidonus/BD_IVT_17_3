@@ -22,7 +22,7 @@ from SalesLT.Product
 order by ProductID
 ;
 
-/* 4. Поулчите товары у которых средняя цена продажи ниже себестоимости */
+/* 4. Получите товары у которых средняя цена продажи ниже себестоимости */
 select ProductID, Name, StandardCost, ListPrice, 
 (select avg(UnitPrice) from SalesLT.SalesOrderDetail a where a.ProductID = SalesLT.Product.ProductID group by a.ProductID) as AvgSellingPrice
 from SalesLT.Product
@@ -30,7 +30,7 @@ where StandardCost > (select avg(UnitPrice) from SalesLT.SalesOrderDetail a wher
 order by ProductID
 ;
 
-/* ____ ЗАДАЧА 2: Полученте информации о клиенте */
+/* ____ ЗАДАЧА 2: Получение информации о клиенте */
 
 /* 1. Получите информацию о клиентах для всех заказов */
 select a.SalesOrderID, b.CustomerID, b.FirstName, b.LastName, a.TotalDue
